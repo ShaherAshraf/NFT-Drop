@@ -1,0 +1,36 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+  color: $blackText;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  color: white;
+  background: $mainLemon;
+}
