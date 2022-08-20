@@ -1,0 +1,36 @@
+.hero {
+  background: orange;
+  height: 107vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__content {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 6rem;
+    margin: 64px 0 0;
+    @mixin atSmall {
+      margin: 75px 0 0;
+    }
+    @mixin atMedium {
+      margin: 73.72px 0 0;
+      font-size: 9rem;
+    }
+  }
+
+  &__title__img {
+    display: none;
+    @mixin atMedium {
+      display: inline-block;
+      width: 400px;
+      transform: translateY(-103.5px);
+    }
+  }
+}

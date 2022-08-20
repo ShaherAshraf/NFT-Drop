@@ -1,0 +1,98 @@
+.header__nav {
+  display: none;
+  @mixin atMedium {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+  }
+
+  &__links,
+  &__social-links {
+    display: flex;
+  }
+
+  &__links li,
+  &__social-links li {
+    margin: 0 0.5rem;
+    @mixin atLarge {
+      margin-left: 1rem;
+    }
+  }
+
+  &__links a {
+    color: $navLinksColor;
+    transition: color 0.2s ease;
+    &:hover {
+      color: $mainBlue;
+    }
+  }
+
+  &__social-links img {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__cta {
+    color: white;
+    background-color: $mainBlue;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.8rem 1.6rem;
+    margin-left: 0.5rem;
+    border-radius: 0.8rem;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: $mainBlueHover;
+    }
+    @mixin atLarge {
+      margin-left: 1rem;
+    }
+  }
+
+  /* Mobile Menu Styles */
+  &--open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    @mixin atSmall {
+      top: 73.72px;
+    }
+  }
+
+  &--open &__links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    li,
+    a {
+      width: 100%;
+    }
+    a {
+      font-size: 1.8rem;
+      padding: 1.2rem 0.8rem;
+    }
+  }
+
+  &--open &__social-links {
+    margin: 1.2rem auto;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--open &__cta {
+    width: 85%;
+    padding: 1.2rem 1.6rem;
+    margin-left: 0;
+  }
+}
