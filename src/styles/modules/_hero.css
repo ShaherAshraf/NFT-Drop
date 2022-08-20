@@ -1,10 +1,74 @@
 .hero {
-  background: orange;
-  height: 107vh;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+
+  &__imgs {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    position: absolute;
+    width: 200px;
+    height: 230px;
+    @mixin atSmall {
+      width: 240px;
+      height: 260px;
+    }
+    @mixin atMedium {
+      width: 250px;
+      height: 300px;
+    }
+  }
+
+  &__img--1 {
+    display: none;
+    @mixin atExtraLarge {
+      display: inline-block;
+      transform: rotateZ(-15deg) translate(3vw, -40vh);
+    }
+  }
+
+  &__img--2 {
+    transform: rotateZ(30deg) translate(10vw, -35vh);
+    @mixin atMedium {
+      transform: rotateZ(30deg) translate(29vw, -64vh);
+    }
+  }
+
+  &__img--3 {
+    transform: rotateZ(-10deg) translate(80vw, 32vh);
+    @mixin atMedium {
+      transform: rotateZ(-10deg) translate(72vw, 32vh);
+    }
+  }
+
+  &__img--4 {
+    transform: rotateZ(10deg) translate(-15vw, 45vh);
+    @mixin atMedium {
+      transform: rotateZ(10deg) translate(12vw, 23vh);
+    }
+  }
+
+  &__img--5 {
+    transform: rotateZ(14deg) translate(60vw, 70vh);
+    @mixin atMedium {
+      transform: rotateZ(14deg) translate(60vw, 60vh);
+    }
+  }
+
+  &__img--6 {
+    display: none;
+    @mixin atExtraLarge {
+      display: inline-block;
+      transform: rotateZ(-17deg) translate(81vw, 131vh);
+    }
+  }
 
   &__content {
     width: 100%;
@@ -31,6 +95,41 @@
       display: inline-block;
       width: 400px;
       transform: translateY(-103.5px);
+    }
+  }
+
+  &__text,
+  &__cta {
+    margin: 2rem auto 0;
+    @mixin atMedium {
+      transform: translateY(-103.5px);
+    }
+  }
+
+  &__text {
+    font-size: 2.1rem;
+    font-weight: bold;
+    width: 90%;
+    line-height: 3.7rem;
+    max-width: 55rem;
+    @mixin atMedium {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__cta {
+    font-size: 1.8rem;
+    color: $blackText;
+    background-color: $mainLemon;
+    padding: 0.8rem 3.2rem;
+    border-radius: 0.9rem;
+    width: 85%;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: $mainLemonHover;
+    }
+    @mixin atSmall {
+      width: 215px;
     }
   }
 }
