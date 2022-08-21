@@ -1,0 +1,31 @@
+.characters {
+  padding: 10rem 0;
+  overflow: hidden;
+
+  &__row {
+    display: flex;
+    margin-bottom: 1.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .character__img {
+    margin-left: 1.5rem;
+    &:first-child,
+    &:last-child {
+      margin-left: 0;
+    }
+    width: calc(100% / 2);
+    @mixin atSmall {
+      width: 200px;
+      width: calc(100% / 3);
+    }
+    @mixin atMedium {
+      width: calc(100% / 4);
+    }
+    @mixin atExtraLarge {
+      min-width: calc(100% / 5);
+    }
+  }
+}
