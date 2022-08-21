@@ -1,0 +1,102 @@
+.about {
+  min-height: 100vh;
+  background: $mainBlue;
+  padding: 6rem 8%;
+
+  .wrapper {
+    display: flex;
+    flex-flow: column-reverse;
+    gap: 3rem;
+    @mixin atMedium {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    @mixin atMedium {
+      width: 50%;
+      gap: 5rem;
+    }
+  }
+
+  &__content,
+  &__img {
+    @mixin atMedium {
+      width: 65%;
+    }
+  }
+
+  &__content__title {
+    font-size: 3.6rem;
+    color: white;
+    @mixin atMedium {
+      font-size: 4.6rem;
+    }
+  }
+
+  &__content__title__img {
+    display: none;
+    @mixin atMedium {
+      display: inline-block;
+      width: 285px;
+      position: absolute;
+      left: 27px;
+      top: 45px;
+    }
+  }
+
+  &__content__text {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    color: white;
+    max-width: 500px;
+    @mixin atMedium {
+      font-size: 1.8rem;
+    }
+    a {
+      color: $mainLemon;
+      text-decoration: underline;
+    }
+  }
+
+  &__content__cta {
+    font-size: 1.6rem;
+    padding: 0.8rem 3.2rem;
+    border-radius: 0.9rem;
+    text-align: center;
+    color: $blackText;
+    background: $mainLemon;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: $mainLemonHover;
+    }
+    @mixin atSmall {
+      font-size: 1.8rem;
+      width: 200px;
+    }
+  }
+
+  &__img {
+    width: 70%;
+    @mixin atSmall {
+      width: 50%;
+    }
+    @mixin atMedium {
+      display: flex;
+      justify-content: space-around;
+    }
+    img {
+      width: 100%;
+      padding: 4rem 0;
+      @mixin atLarge {
+        width: 80%;
+      }
+    }
+  }
+}
