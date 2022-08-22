@@ -1,24 +1,28 @@
-.about {
+.creator {
   min-height: 100vh;
   background: $mainBlue;
-  padding: 6rem 8%;
+  padding: 10rem 8%;
   color: white;
+
+  .wrapper {
+    display: block;
+    @mixin atMedium {
+      display: flex;
+      gap: 12rem;
+    }
+  }
 
   &__content {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    @mixin atMedium {
-      width: 50%;
-      gap: 5rem;
-    }
   }
 
   &__content,
   &__img {
     @mixin atMedium {
-      width: 65%;
+      width: 50%;
     }
   }
 
@@ -33,19 +37,18 @@
     display: none;
     @mixin atMedium {
       display: inline-block;
-      width: 285px;
+      width: 160px;
       position: absolute;
-      left: 27px;
-      top: 45px;
+      top: -12px;
     }
   }
 
   &__content__text {
-    font-size: 1.7rem;
-    line-height: 2.5rem;
+    font-size: 2rem;
     max-width: 500px;
-    @mixin atMedium {
-      font-size: 1.8rem;
+    line-height: 2.8rem;
+    p:first-child {
+      margin-bottom: 2rem;
     }
     a {
       color: $mainLemon;
@@ -60,17 +63,17 @@
   &__content__cta {
     font-size: 1.6rem;
     padding: 0.8rem 3.2rem;
-    border-radius: 0.9rem;
     text-align: center;
     color: $blackText;
     background: $mainLemon;
+    border-radius: 9px;
     transition: background-color 0.2s ease-in-out;
     &:hover {
       background-color: $mainLemonHover;
     }
     @mixin atSmall {
       font-size: 1.8rem;
-      width: 200px;
+      max-width: 210px;
     }
   }
 
@@ -80,15 +83,13 @@
       width: 50%;
     }
     @mixin atMedium {
+      width: 45%;
       display: flex;
       justify-content: space-around;
     }
     img {
       width: 100%;
-      padding: 4rem 0;
-      @mixin atLarge {
-        width: 80%;
-      }
+      margin-bottom: 2rem;
     }
   }
 }
