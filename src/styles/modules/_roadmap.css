@@ -1,0 +1,87 @@
+.roadmap {
+  background: $mainSkyBlue;
+  padding: 10rem 8%;
+
+  &__img {
+    display: none;
+    @mixin atMedium {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    width: 90%;
+    @mixin atMedium {
+      width: 100%;
+    }
+  }
+
+  &__content,
+  &__img {
+    @mixin atMedium {
+      width: 50%;
+    }
+  }
+
+  &__content__title {
+    font-size: 3.6rem;
+    @mixin atMedium {
+      font-size: 4.6rem;
+    }
+  }
+
+  &__content__title__img {
+    display: none;
+    @mixin atMedium {
+      display: inline-block;
+      width: 200px;
+      position: absolute;
+      top: -13px;
+    }
+  }
+
+  &__content__text {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    @mixin atMedium {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__content__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    margin: 2rem 0;
+  }
+
+  &__content__card-item {
+    background: white;
+    padding: 2.4rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__content__card__title {
+    font-size: 2rem;
+    @mixin atMedium {
+      font-size: 2.2rem;
+    }
+    span {
+      color: $mainBlue;
+      font-size: 1.8rem;
+      margin-right: 0.4rem;
+    }
+  }
+
+  &__content__card__text {
+    line-height: 2.5rem;
+  }
+}

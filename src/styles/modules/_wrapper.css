@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  flex-flow: column-reverse;
+  gap: 3rem;
+  @mixin atMedium {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

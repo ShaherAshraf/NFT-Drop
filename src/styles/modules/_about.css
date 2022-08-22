@@ -3,17 +3,6 @@
   background: $mainBlue;
   padding: 6rem 8%;
 
-  .wrapper {
-    display: flex;
-    flex-flow: column-reverse;
-    gap: 3rem;
-    @mixin atMedium {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-
   &__content {
     position: relative;
     display: flex;
