@@ -1,0 +1,88 @@
+.rarity {
+  min-height: 100vh;
+  padding: 10rem 8%;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin: 4rem 0;
+    @mixin atMedium {
+      align-items: flex-start;
+    }
+  }
+
+  &__content__title {
+    font-size: 3.6rem;
+    @mixin atMedium {
+      font-size: 4.6rem;
+    }
+  }
+
+  &__content__title__img {
+    display: none;
+    @mixin atMedium {
+      display: inline-block;
+      width: 130px;
+      position: absolute;
+      top: -13px;
+    }
+  }
+
+  &__content__text {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    text-align: center;
+    @mixin atMedium {
+      font-size: 1.8rem;
+      text-align: left;
+    }
+  }
+
+  &__content__colors {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__content__color {
+    background: orange;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.4rem;
+    border-radius: 3px;
+    font-size: 1.8rem;
+    .key {
+      font-weight: bold;
+    }
+  }
+
+  &__content__color--1 {
+    background: $lemonShade1;
+  }
+
+  &__content__color--2 {
+    background: $lemonShade2;
+  }
+
+  &__content__color--3 {
+    background: $lemonShade3;
+  }
+
+  &__content__color--4 {
+    background: $lemonShade4;
+  }
+
+  &__content__color--5 {
+    background: $lemonShade5;
+  }
+
+  &__img {
+    @mixin atMedium {
+      width: 140%;
+    }
+  }
+}
