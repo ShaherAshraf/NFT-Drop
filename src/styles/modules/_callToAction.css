@@ -1,0 +1,69 @@
+.callToAction {
+  background: $mainLemon;
+  padding: 0 8%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  @mixin atMedium {
+    height: 80vh;
+  }
+
+  .wrapper {
+    width: 100%;
+    gap: 10rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 84%;
+  }
+
+  &__title {
+    font-size: 3.6rem;
+    @mixin atMedium {
+      font-size: 4.6rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    @mixin atMedium {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__btn {
+    font-size: 1.6rem;
+    color: white;
+    background: $mainBlue;
+    text-align: center;
+    padding: 1rem 3.2rem;
+    border-radius: 9px;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: $mainBlueHover;
+    }
+    @mixin atSmall {
+      width: 215px;
+    }
+    @mixin atMedium {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__img {
+    display: none;
+    @mixin atMedium {
+      display: inline-block;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
