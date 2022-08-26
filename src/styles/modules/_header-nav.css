@@ -1,15 +1,77 @@
 .header__nav {
-  display: none;
+  display: flex;
+  align-items: center;
+
+  &--mobileMenu {
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background: white;
+    border-top: 1px solid $grayBg;
+    height: 335.83px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    @mixin atSmall {
+      top: 73.72px;
+    }
+  }
+  &--mobileMenu.closed {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border-top: 0;
+    transition: all 0.4s ease;
+    @mixin atMedium {
+      height: auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
   @mixin atMedium {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-direction: row;
+    position: relative;
+    top: 0;
     width: 80%;
+    padding: 0;
+    background: transparent;
   }
 
-  &__links,
-  &__social-links {
+  &__links {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    @mixin atMedium {
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 80%;
+    }
+  }
+
+  &__links li,
+  &__links a {
+    width: 100%;
+    @mixin atMedium {
+      width: auto;
+    }
+  }
+
+  &__links a {
+    font-size: 1.8rem;
+    padding: 1.2rem 0.8rem;
+    color: $navLinksColor;
+    transition: color 0.2s ease;
+    &:hover {
+      color: $mainBlue;
+    }
+    @mixin atMedium {
+      font-size: 1.5rem;
+    }
   }
 
   &__links li,
@@ -20,79 +82,45 @@
     }
   }
 
-  &__links a {
-    color: $navLinksColor;
-    transition: color 0.2s ease;
-    &:hover {
-      color: $mainBlue;
+  &__social-links {
+    display: flex;
+    margin: 1.2rem auto;
+    a {
+      width: 24px;
+      height: 24px;
+      @mixin atMedium {
+        width: 20px;
+        height: 20px;
+      }
     }
-  }
-
-  &__social-links img {
-    width: 20px;
-    height: 20px;
+    img {
+      width: 100%;
+    }
   }
 
   &__cta {
     color: white;
     background-color: $mainBlue;
     text-align: center;
-    font-size: 1.5rem;
-    padding: 0.8rem 1.6rem;
-    margin-left: 0.5rem;
+    font-size: 1.8rem;
+    padding: 1.2rem 1.6rem;
+    margin-left: 0rem;
     border-radius: 0.8rem;
     transition: background-color 0.2s ease-in-out;
+    width: 85%;
     &:hover {
       background-color: $mainBlueHover;
     }
+    @mixin atMedium {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      min-width: 160px;
+      max-width: 165px;
+    }
     @mixin atLarge {
       margin-left: 1rem;
+      max-width: 165px;
     }
-  }
-
-  /* Mobile Menu Styles */
-  &--open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    padding-top: 2rem;
-    padding-bottom: 4rem;
-    @mixin atSmall {
-      top: 73.72px;
-    }
-  }
-
-  &--open &__links {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    li,
-    a {
-      width: 100%;
-    }
-    a {
-      font-size: 1.8rem;
-      padding: 1.2rem 0.8rem;
-    }
-  }
-
-  &--open &__social-links {
-    margin: 1.2rem auto;
-    img {
-      width: 24px;
-      height: 24px;
-    }
-  }
-
-  &--open &__cta {
-    width: 85%;
-    padding: 1.2rem 1.6rem;
-    margin-left: 0;
   }
 }

@@ -1,4 +1,6 @@
 .roadmap {
+  display: flex;
+  justify-content: center;
   background: $mainSkyBlue;
   padding: 10rem 8%;
 

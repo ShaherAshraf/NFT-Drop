@@ -1,4 +1,6 @@
 .rarity {
+  display: flex;
+  justify-content: center;
   min-height: 100vh;
   padding: 10rem 8%;
 

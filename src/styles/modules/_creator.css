@@ -1,4 +1,6 @@
 .creator {
+  display: flex;
+  justify-content: center;
   min-height: 100vh;
   background: $mainBlue;
   padding: 10rem 8%;
