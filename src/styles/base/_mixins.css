@@ -10,12 +10,6 @@
   }
 }
 
-@define-mixin atMaxMedium {
-  @media (max-width: 767px) {
-    @mixin-content;
-  }
-}
-
 @define-mixin atMedium {
   @media (min-width: 768px) {
     @mixin-content;

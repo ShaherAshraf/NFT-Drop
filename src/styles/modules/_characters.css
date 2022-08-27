@@ -4,21 +4,52 @@
 
   &__row {
     display: flex;
+    width: 100%;
     margin-bottom: 1.5rem;
     &:last-child {
       margin-bottom: 0;
     }
   }
 
+  &__row--1 {
+    @mixin atMedium {
+      margin-left: 50%;
+    }
+    @mixin atExtraLarge {
+      margin-left: 25%;
+    }
+  }
+
+  &__row--2 {
+    margin-left: -300%;
+    @mixin atSmall {
+      margin-left: -250%;
+    }
+    @mixin atMedium {
+      margin-left: -150%;
+    }
+    @mixin atExtraLarge {
+      margin-left: -100%;
+    }
+  }
+
+  &__row--3 {
+    margin-left: 50%;
+    @mixin atLarge {
+      margin-left: 75%;
+    }
+    @mixin atExtraLarge {
+      margin-left: 50%;
+    }
+  }
+
   .character__img {
     margin-left: 1.5rem;
-    &:first-child,
-    &:last-child {
+    &:first-child {
       margin-left: 0;
     }
     width: calc(100% / 2);
     @mixin atSmall {
-      width: 200px;
       width: calc(100% / 3);
     }
     @mixin atMedium {
