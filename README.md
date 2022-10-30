@@ -17,7 +17,7 @@ This is a vanilla JS landing page as a simulation of the [NFT Drop](https://nft-
 
 ### Links
 
-- Live Site URL: [NFT Drop](https://your-live-site-url.com)
+- Live Site URL: [NFT Drop](https://nft-drop-pi.vercel.app/)
 
 ## Author
 
