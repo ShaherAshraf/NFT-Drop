@@ -61,6 +61,10 @@
     }
   }
 
+  &__links li a.active {
+    color: $mainBlue;
+  }
+
   &__links a {
     font-size: 1.8rem;
     padding: 1.2rem 0.8rem;

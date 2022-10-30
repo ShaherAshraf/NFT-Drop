@@ -88,7 +88,6 @@
     display: flex;
     gap: 2rem;
     li {
-      padding: 0.8rem;
       border: 1px solid $mainSkyBlue;
       border-radius: 8px;
       display: flex;
@@ -100,6 +99,7 @@
       }
     }
     img {
+      margin: 0.8rem;
       width: 24px;
       height: 24px;
     }

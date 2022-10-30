@@ -17,6 +17,8 @@
   }
 
   &__content__title {
+    opacity: 0;
+    transform: translateY(10rem);
     font-size: 3.6rem;
     @mixin atMedium {
       font-size: 4.6rem;
@@ -24,6 +26,8 @@
   }
 
   &__content__title__img {
+    opacity: 0;
+    transform: translateY(10rem);
     display: none;
     @mixin atMedium {
       display: inline-block;
@@ -34,6 +38,8 @@
   }
 
   &__content__text {
+    opacity: 0;
+    transform: translateY(10rem);
     font-size: 1.7rem;
     line-height: 2.5rem;
     text-align: center;
@@ -44,6 +50,8 @@
   }
 
   &__content__colors {
+    opacity: 0;
+    transform: translateY(10rem);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -83,6 +91,7 @@
   }
 
   &__img {
+    scale: 0;
     @mixin atMedium {
       width: 140%;
     }

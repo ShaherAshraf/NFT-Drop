@@ -4,11 +4,16 @@
   background: $mainSkyBlue;
   padding: 10rem 8%;
 
+  .wrapper {
+    align-items: flex-start;
+  }
+
   &__img {
     display: none;
     @mixin atMedium {
       display: flex;
       justify-content: center;
+      transform: rotate(-10deg);
     }
   }
 
